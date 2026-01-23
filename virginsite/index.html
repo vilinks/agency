@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Virgin Agency</title>
+<meta name="description" content="Model-first агентство. 40% модели от чистой прибыли. Прозрачность, персональный подход и масштабный трафик.">
+<style>
+:root{
+ --bg:#070b10;--glass:rgba(255,255,255,.08);--stroke:rgba(255,255,255,.18);
+ --text:#eaf4ff;--muted:#a9c1d8;--blue:#2aa9e0;--blue2:#6bc1e8;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,Arial,sans-serif;
+ background:
+ radial-gradient(1200px 600px at 10% -10%,rgba(42,169,224,.35),transparent),
+ radial-gradient(900px 500px at 90% 10%,rgba(107,193,232,.25),transparent),
+ var(--bg);
+ color:var(--text);
+}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
+.glass{
+ background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));
+ border:1px solid var(--stroke);
+ backdrop-filter:blur(16px);
+ border-radius:26px;
+ box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+.top{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:14px 18px;margin-bottom:18px
+}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{width:48px;height:48px;border-radius:14px}
+.lang button{
+ background:rgba(255,255,255,.08);
+ border:1px solid var(--stroke);
+ color:var(--text);
+ padding:8px 12px;border-radius:12px;cursor:pointer;font-weight:700
+}
+.lang button.active{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#061018}
+.hero{padding:32px;margin-bottom:18px}
+h1{margin:0;font-size:40px;line-height:1.1}
+p{color:var(--muted);line-height:1.7}
+.section{padding:26px;margin-top:18px}
+.section h2{margin:0 0 10px;font-size:26px}
+.bullets{list-style:none;padding:0;margin:14px 0 0}
+.bullets li{
+ margin-top:10px;padding:14px;border-radius:18px;
+ background:rgba(255,255,255,.05);border:1px solid var(--stroke)
+}
+.carousel{padding:22px;margin-top:18px}
+.track{display:flex;gap:14px;overflow-x:auto}
+.slide{
+ flex:0 0 280px;height:360px;border-radius:18px;
+ background:#000;border:1px solid var(--stroke);overflow:hidden
+}
+.slide img{width:100%;height:100%;object-fit:contain}
+.cta{text-align:center;padding:30px;margin-top:22px}
+a.tg{
+ display:inline-block;margin-top:14px;
+ padding:14px 20px;border-radius:16px;
+ background:linear-gradient(135deg,var(--blue),var(--blue2));
+ color:#061018;font-weight:900;text-decoration:none
+}
+footer{text-align:center;color:var(--muted);margin-top:24px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="top glass">
+  <div class="brand">
+    <img src="logo.jpeg" alt="Virgin Agency">
+    <b>Virgin Agency</b>
+  </div>
+  <div class="lang">
+    <button class="active">RU</button>
+    <button>EN</button>
+    <button>ES</button>
+  </div>
+ </div>
+
+ <div class="hero glass">
+  <h1>Мы строим работу вокруг модели, а не за её счёт.</h1>
+  <p>
+   Наша позиция простая и честная: модель — партнёр.<br><br>
+   Она получает <b>40% от чистой прибыли</b>. Не «до вычета», не «когда‑нибудь потом», а по понятной и прозрачной схеме.
+   Мы не верим в агентства, где модель — расходник. Наша цель — снять с неё максимум рутины и оставить только то,
+   что реально влияет на доход.
+  </p>
+ </div>
+
+ <div class="section glass">
+  <h2>Минимум усилий — максимум дохода</h2>
+  <p>
+   Ты не живёшь для контента — контент работает на тебя.
+   Мы выстраиваем процесс так, чтобы не было бесконечной гонки «снимай больше».
+  </p>
+  <ul class="bullets">
+   <li>Минимальные требования к количеству контента</li>
+   <li>Чёткий и понятный формат съёмок</li>
+   <li>Система вместо хаоса</li>
+  </ul>
+ </div>
+
+ <div class="section glass">
+  <h2>Персональный подход</h2>
+  <p>
+   Мы не ломаем модель под рынок — мы подстраиваем рынок под модель.
+  </p>
+  <ul class="bullets">
+   <li>Личный ассистент всегда на связи</li>
+   <li>Индивидуальный контент‑план под стиль и табу</li>
+   <li>Полное понимание и контроль процесса</li>
+  </ul>
+ </div>
+
+ <div class="section glass">
+  <h2>Масштабный и диверсифицированный трафик</h2>
+  <p>
+   Мы строим экосистему, а не ставим всё на один канал:
+   Twitter, Reddit, TikTok, Instagram, YouTube Shorts, Fansly,
+   Pornhub и десятки дополнительных источников.
+  </p>
+ </div>
+
+ <div class="section glass">
+  <h2>Прозрачность</h2>
+  <ul class="bullets">
+   <li>Мы не забираем доступы от страниц</li>
+   <li>Модель всегда видит, что происходит</li>
+   <li>Никаких скрытых действий за спиной</li>
+  </ul>
+ </div>
+
+ <div class="carousel glass">
+  <h2>Кейсы</h2>
+  <div class="track">
+<div class="slide"><img src="cases/1.jpeg" alt="Case 1"></div><div class="slide"><img src="cases/2.jpeg" alt="Case 2"></div><div class="slide"><img src="cases/3.jpeg" alt="Case 3"></div><div class="slide"><img src="cases/4.jpeg" alt="Case 4"></div><div class="slide"><img src="cases/5.jpeg" alt="Case 5"></div><div class="slide"><img src="cases/6.jpeg" alt="Case 6"></div><div class="slide"><img src="cases/7.jpeg" alt="Case 7"></div><div class="slide"><img src="cases/8.jpeg" alt="Case 8"></div><div class="slide"><img src="cases/9.jpeg" alt="Case 9"></div><div class="slide"><img src="cases/10.jpeg" alt="Case 10"></div><div class="slide"><img src="cases/11.jpeg" alt="Case 11"></div><div class="slide"><img src="cases/12.jpeg" alt="Case 12"></div><div class="slide"><img src="cases/13.jpeg" alt="Case 13"></div><div class="slide"><img src="cases/14.jpeg" alt="Case 14"></div>
+  </div>
+ </div>
+
+ <div class="cta glass">
+  <h2>Хочешь начать работать с нами?</h2>
+  <p>Напиши нам в Telegram — обсудим формат и подойдём ли мы друг другу.</p>
+  <a class="tg" href="https://t.me/shushecka" target="_blank">@shushecka</a>
+ </div>
+
+ <footer>Virgin Agency ©</footer>
+</div>
+</body>
+</html>
