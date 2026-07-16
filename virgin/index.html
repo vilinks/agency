@@ -1,891 +1,374 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Virgin Agency — Model-first growth</title>
-  <meta name="description" content="Virgin Agency builds around the model, not at her expense: transparent 40% net profit share, diversified traffic, personal support, and full control." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#23a9e0">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Virgin Agency" />
-  <meta property="og:description" content="Model-first agency. Transparent 40% net profit share. Diversified traffic. Full control." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.jpeg" />
+  <title>Virgin Agency — агентство работает на модель</title>
+  <meta name="description" content="Модель получает 40% чистой прибыли, полный доступ к аккаунтам, персональную команду и диверсифицированную систему трафика.">
+  <link rel="canonical" href="https://vilinks.github.io/agency/virgin/">
 
-  <style>
-    :root{
-      --bg0:#050a12;
-      --bg1:#071425;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.08);
-      --stroke:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.72);
-      --muted2:rgba(255,255,255,.58);
-      --blue:#2ea9df;     /* logo vibe */
-      --blue2:#55c7ff;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius:22px;
-      --radius2:16px;
-      --max:1100px;
-    }
+  <meta property="og:title" content="Virgin Agency — Model-first growth">
+  <meta property="og:description" content="The agency works for the model. Not the other way around.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vilinks.github.io/agency/virgin/">
+  <meta property="og:image" content="https://vilinks.github.io/agency/virgin/assets/og.png">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta property="og:image:alt" content="Virgin Agency — 40% net profit, full control, multi-channel growth">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Virgin Agency — Model-first growth">
+  <meta name="twitter:description" content="The agency works for the model. Not the other way around.">
+  <meta name="twitter:image" content="https://vilinks.github.io/agency/virgin/assets/og.png">
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 20% 10%, rgba(46,169,223,.22), transparent 60%),
-        radial-gradient(900px 700px at 80% 20%, rgba(85,199,255,.14), transparent 55%),
-        radial-gradient(900px 800px at 70% 90%, rgba(46,169,223,.10), transparent 55%),
-        linear-gradient(180deg, var(--bg0), var(--bg1) 65%, #040913);
-      overflow-x:hidden;
-    }
-
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      position:sticky; top:0; z-index:20;
-      padding:14px 0;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(5,10,18,.88), rgba(5,10,18,.52));
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:0;
-    }
-    .logo{
-      width:44px; height:44px; border-radius:14px;
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow: 0 10px 28px rgba(0,0,0,.35);
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .logo img{width:100%; height:100%; object-fit:cover; display:block}
-    .brandtext{min-width:0}
-    .brandtext .name{
-      font-weight:800; letter-spacing:.2px; font-size:15px; line-height:1.1;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .brandtext .tag{
-      font-size:12px; color:var(--muted2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-      margin-top:2px;
-    }
-
-    .lang{
-      display:flex; align-items:center; gap:8px;
-      padding:6px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.06);
-      border-radius: 999px;
-      box-shadow: 0 14px 40px rgba(0,0,0,.25);
-    }
-    .lang button{
-      appearance:none; border:0; cursor:pointer;
-      font-weight:700; font-size:12px; letter-spacing:.25px;
-      padding:9px 12px; border-radius: 999px;
-      color: rgba(255,255,255,.78);
-      background: transparent;
-      transition: transform .15s ease, background .15s ease, color .15s ease;
-    }
-    .lang button:hover{transform: translateY(-1px); background: rgba(255,255,255,.07); color: rgba(255,255,255,.92)}
-    .lang button[aria-pressed="true"]{
-      background: linear-gradient(135deg, rgba(46,169,223,.92), rgba(85,199,255,.85));
-      color: #06121f;
-      box-shadow: 0 12px 30px rgba(46,169,223,.22);
-    }
-
-    .hero{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr; }
-    }
-
-    .card{
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      border: 1px solid rgba(255,255,255,.11);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .card::before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(500px 250px at 15% 15%, rgba(46,169,223,.25), transparent 60%);
-      opacity:.9; pointer-events:none;
-      mask: linear-gradient(#000, transparent 72%);
-    }
-    .card-inner{position:relative; padding:26px}
-    .kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      font-weight:800; font-size:12px; letter-spacing:.22em; text-transform:uppercase;
-      color: rgba(255,255,255,.78);
-      padding:8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-    }
-    .dot{
-      width:8px; height:8px; border-radius:99px;
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      box-shadow: 0 10px 22px rgba(46,169,223,.22);
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size: clamp(30px, 3.6vw, 46px);
-      line-height:1.06;
-      letter-spacing:-.02em;
-    }
-    .lead{
-      margin:0;
-      font-size: 15px;
-      line-height:1.6;
-      color: var(--muted);
-      max-width: 62ch;
-    }
-    .pillrow{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:18px;
-    }
-    .pill{
-      display:flex; align-items:center; gap:10px;
-      padding:12px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.86);
-      font-weight:700; font-size:13px;
-    }
-    .pill .b{
-      width:10px; height:10px; border-radius:99px;
-      background: linear-gradient(135deg, rgba(46,169,223,1), rgba(85,199,255,1));
-    }
-
-    .side{
-      display:flex; flex-direction:column; gap:14px;
-    }
-    .statgrid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:12px;
-    }
-    @media (max-width: 520px){
-      .statgrid{grid-template-columns:1fr}
-    }
-    .stat{
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      padding:14px 14px 12px;
-    }
-    .stat .num{
-      font-weight:900;
-      font-size: 18px;
-      letter-spacing:-.01em;
-    }
-    .stat .lbl{
-      margin-top:6px;
-      font-size: 12px;
-      color: var(--muted2);
-      line-height:1.45;
-    }
-    .cta{
-      border-radius: var(--radius2);
-      padding:16px;
-      border:1px solid rgba(255,255,255,.12);
-      background: linear-gradient(135deg, rgba(46,169,223,.18), rgba(255,255,255,.05));
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .cta p{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
-    .cta a{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      text-decoration:none;
-      padding:12px 14px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(46,169,223,.92), rgba(85,199,255,.86));
-      color:#06121f;
-      font-weight:900;
-      letter-spacing:.01em;
-      box-shadow: 0 16px 40px rgba(46,169,223,.22);
-      transition: transform .15s ease, filter .15s ease;
-    }
-    .cta a:hover{transform: translateY(-1px); filter: brightness(1.02)}
-    .cta a:active{transform: translateY(0px); filter: brightness(.98)}
-    .cta small{color:rgba(255,255,255,.55)}
-    .section{
-      margin-top:18px;
-      padding:22px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-    }
-    .section h2{
-      margin:0 0 8px;
-      font-size: 18px;
-      letter-spacing:-.01em;
-    }
-    .section p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:14px;
-    }
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:14px;
-    }
-    @media (max-width: 920px){ .grid2{grid-template-columns:1fr} }
-    .feature{
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      padding:16px;
-    }
-    .feature h3{
-      margin:0 0 8px;
-      font-size: 15px;
-      letter-spacing:-.01em;
-    }
-    .feature ul{
-      margin:0; padding-left:18px;
-      color: var(--muted);
-      line-height:1.7;
-      font-size:14px;
-    }
-    .divider{
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
-      margin:16px 0;
-    }
-
-    /* Carousel */
-    .casesHead{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
-      flex-wrap:wrap;
-    }
-    .casesHead .sub{color:var(--muted2); font-size:13px; margin:0; line-height:1.5}
-    .carouselWrap{
-      margin-top:14px;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      overflow:hidden;
-    }
-    .carousel{
-      display:flex;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      scroll-behavior:smooth;
-      gap:14px;
-      padding:16px;
-    }
-    .carousel::-webkit-scrollbar{height:10px}
-    .carousel::-webkit-scrollbar-thumb{background: rgba(255,255,255,.15); border-radius:999px}
-    .slide{
-      flex: 0 0 min(78vw, 520px);
-      scroll-snap-align:center;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      overflow:hidden;
-      position:relative;
-    }
-    .slide .ph{
-      width:100%;
-      height: 320px;
-      display:block;
-      background:
-        radial-gradient(600px 300px at 20% 30%, rgba(46,169,223,.18), transparent 60%),
-        radial-gradient(600px 300px at 80% 80%, rgba(85,199,255,.12), transparent 60%),
-        rgba(255,255,255,.03);
-    }
-    @media (max-width: 520px){
-      .slide{flex-basis: 86vw}
-      .slide .ph{height: 280px}
-    }
-    .slide img{
-      width:100%;
-      height:100%;
-      object-fit: contain;      /* handles different sizes nicely */
-      display:block;
-      background: rgba(0,0,0,.25);
-    }
-    .slide .cap{
-      position:absolute; left:12px; top:12px;
-      font-size:12px; font-weight:900;
-      padding:8px 10px;
-      border-radius: 999px;
-      color: rgba(255,255,255,.90);
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(8px);
-    }
-    .controls{
-      display:flex; justify-content:space-between; align-items:center;
-      gap:12px;
-      padding:12px 14px 14px;
-      border-top:1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.16);
-    }
-    .btnRow{display:flex; gap:10px}
-    .navbtn{
-      appearance:none; border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color: rgba(255,255,255,.90);
-      cursor:pointer;
-      padding:10px 12px;
-      border-radius: 14px;
-      font-weight:900;
-      transition: transform .15s ease, background .15s ease;
-    }
-    .navbtn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08)}
-    .navbtn:active{transform: translateY(0px); background: rgba(255,255,255,.06)}
-    .dots{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
-    .dotb{
-      width:8px; height:8px; border-radius:99px;
-      background: rgba(255,255,255,.18);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .dotb[aria-current="true"]{
-      background: linear-gradient(135deg, rgba(46,169,223,1), rgba(85,199,255,1));
-      border-color: rgba(255,255,255,.22);
-    }
-
-    .footer{
-      margin-top:18px;
-      padding:22px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(46,169,223,.08));
-      border:1px solid rgba(255,255,255,.10);
-      text-align:center;
-    }
-    .footer h2{margin:0 0 8px; font-size:18px}
-    .footer p{margin:0; color:var(--muted); line-height:1.7; font-size:14px}
-    .handle{
-      display:inline-flex; align-items:center; justify-content:center;
-      margin-top:12px;
-      padding:12px 14px;
-      border-radius: 14px;
-      background: rgba(0,0,0,.22);
-      border:1px solid rgba(255,255,255,.14);
-      font-weight:900;
-      letter-spacing:.01em;
-    }
-
-    /* Accessibility focus */
-    button:focus-visible, a:focus-visible{
-      outline: 3px solid rgba(85,199,255,.70);
-      outline-offset: 2px;
-    }
-  </style>
+  <link rel="icon" href="assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&amp;family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar" role="banner">
-      <div class="brand" aria-label="Virgin Agency">
-        <div class="logo" aria-hidden="true"><img src="assets/logo.jpeg" alt="Virgin Agency logo"></div>
-        <div class="brandtext">
-          <div class="name">VIRGIN AGENCY</div>
-          <div class="tag" data-i18n="top.tagline">Model-first growth. Transparent. Scalable.</div>
+  <a class="skip-link" href="#content" data-i18n="a11y.skip">Перейти к содержанию</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="Virgin Agency — на главную">
+      <img class="brand-mark" src="assets/logo.jpeg" alt="" width="48" height="48">
+      <span class="brand-name">VIRGIN<br>AGENCY</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span data-i18n="nav.menu">Меню</span>
+      <i aria-hidden="true"></i>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+      <a href="#position" data-i18n="nav.position">Позиция</a>
+      <a href="#approach" data-i18n="nav.approach">Подход</a>
+      <a href="#cases" data-i18n="nav.cases">Результаты</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switcher" aria-label="Выбор языка">
+        <button type="button" class="lang-button" data-lang="en">EN</button>
+        <button type="button" class="lang-button" data-lang="es">ES</button>
+        <button type="button" class="lang-button" data-lang="ru" aria-pressed="true">RU</button>
+      </div>
+      <a class="header-cta magnetic" href="https://t.me/shushecka" target="_blank" rel="noopener">
+        <span data-i18n="nav.cta">Обсудить старт</span><b aria-hidden="true">↗</b>
+      </a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <div class="eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.eyebrow">Boutique creator management · Global</span>
+        </div>
+
+        <h1 id="heroTitle" class="hero-title reveal" data-i18n="hero.title">
+          Агентство работает<br>
+          <em>на модель.</em> Не наоборот.
+        </h1>
+
+        <p class="hero-lead reveal" data-i18n="hero.lead">
+          Строим персональную систему роста вокруг твоего стиля, границ и целей. Ты сохраняешь контроль, получаешь <strong>40% чистой прибыли</strong> и не живёшь ради контента.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="button button-dark magnetic" href="https://t.me/shushecka" target="_blank" rel="noopener">
+            <span data-i18n="hero.cta">Написать в Telegram</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a class="text-link" href="#approach">
+            <span data-i18n="hero.secondary">Как это работает</span>
+            <b aria-hidden="true">↓</b>
+          </a>
+        </div>
+
+        <div class="hero-meta reveal" aria-label="Ключевые преимущества">
+          <span data-i18n="hero.meta1">Полный доступ</span>
+          <span data-i18n="hero.meta2">Личный ассистент</span>
+          <span data-i18n="hero.meta3">Без шаблонов</span>
         </div>
       </div>
 
-      <div class="lang" aria-label="Language switcher">
-        <button type="button" class="langbtn" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="langbtn" data-lang="es" aria-pressed="false">ES</button>
-        <button type="button" class="langbtn" data-lang="ru" aria-pressed="false">RU</button>
+      <div class="hero-art reveal" id="heroArt" aria-label="40 процентов чистой прибыли модели">
+        <div class="hero-art-label" data-i18n="hero.artLabel">Чистая прибыль модели</div>
+        <div class="flower flower-back" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div class="hero-number" aria-hidden="true">
+          <span>40</span><sup>%</sup>
+        </div>
+        <div class="orbit-note orbit-note-one">
+          <span>01</span>
+          <b data-i18n="hero.orbit1">Прозрачная<br>математика</b>
+        </div>
+        <div class="orbit-note orbit-note-two">
+          <span>02</span>
+          <b data-i18n="hero.orbit2">Трафик как<br>экосистема</b>
+        </div>
+        <div class="hero-art-footer">
+          <span data-i18n="hero.artFooter">Model-first since day one</span>
+          <span aria-hidden="true">✦</span>
+        </div>
+      </div>
+
+      <div class="hero-index" aria-hidden="true">01 / VIRGIN</div>
+    </section>
+
+    <div class="marquee" aria-label="Каналы роста">
+      <div class="marquee-track">
+        <span>TWITTER</span><i>✦</i><span>REDDIT</span><i>✦</i><span>INSTAGRAM</span><i>✦</i>
+        <span>TIKTOK</span><i>✦</i><span>YOUTUBE SHORTS</span><i>✦</i><span>FANSLY</span><i>✦</i>
+        <span>ORGANIC</span><i>✦</i><span>RETENTION</span><i>✦</i>
+        <span>TWITTER</span><i>✦</i><span>REDDIT</span><i>✦</i><span>INSTAGRAM</span><i>✦</i>
+        <span>TIKTOK</span><i>✦</i><span>YOUTUBE SHORTS</span><i>✦</i><span>FANSLY</span><i>✦</i>
+        <span>ORGANIC</span><i>✦</i><span>RETENTION</span><i>✦</i>
       </div>
     </div>
 
-    <main>
-      <div class="hero">
-        <section class="card" aria-label="Intro">
-          <div class="card-inner">
-            <div class="kicker"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.kicker">MODEL-FIRST AGENCY</span></div>
-            <h1 data-i18n="hero.h1">We build around the model — not at her expense.</h1>
-            <p class="lead" data-i18n="hero.lead">
-              A simple and honest position: the model receives <b>40% of net profit</b> — transparent, clear, and paid by a understandable scheme.
-            </p>
-
-            <div class="pillrow" aria-label="Key points">
-              <div class="pill"><span class="b" aria-hidden="true"></span><span data-i18n="hero.p1">40% to the model</span></div>
-              <div class="pill"><span class="b" aria-hidden="true"></span><span data-i18n="hero.p2">Diversified traffic system</span></div>
-              <div class="pill"><span class="b" aria-hidden="true"></span><span data-i18n="hero.p3">Full access & control</span></div>
-            </div>
-          </div>
-        </section>
-
-        <aside class="side" aria-label="Highlights">
-          <section class="card">
-            <div class="card-inner">
-              <div class="statgrid">
-                <div class="stat">
-                  <div class="num" data-i18n="stats.s1n">40%</div>
-                  <div class="lbl" data-i18n="stats.s1t">to the model from net profit</div>
-                </div>
-                <div class="stat">
-                  <div class="num" data-i18n="stats.s2n">Ecosystem</div>
-                  <div class="lbl" data-i18n="stats.s2t">not a single lucky channel</div>
-                </div>
-                <div class="stat">
-                  <div class="num" data-i18n="stats.s3n">Assistant</div>
-                  <div class="lbl" data-i18n="stats.s3t">always on call for questions</div>
-                </div>
-                <div class="stat">
-                  <div class="num" data-i18n="stats.s4n">Transparency</div>
-                  <div class="lbl" data-i18n="stats.s4t">no hidden actions or “black magic”</div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="cta" role="note">
-                <p data-i18n="cta.text">Want to start working with us? Message us on Telegram.</p>
-                <a href="https://t.me/shushecka" target="_blank" rel="noopener" aria-label="Open Telegram @shushecka">
-                  <span data-i18n="cta.btn">Write on Telegram</span> <span aria-hidden="true">→</span>
-                </a>
-                <small data-i18n="cta.note">We respond fast. No spam. Straight to business.</small>
-              </div>
-            </div>
-          </section>
-        </aside>
+    <section class="position section-pad" id="position">
+      <div class="section-top reveal">
+        <p class="section-kicker"><span>02</span><b data-i18n="position.kicker">Наша позиция</b></p>
+        <p class="section-aside" data-i18n="position.aside">Партнёрство вместо зависимости</p>
       </div>
 
-      <section class="section" aria-label="Position">
-        <h2 data-i18n="pos.h2">Our position</h2>
-        <p data-i18n="pos.p">
-          We don’t believe in agencies where the model is a consumable, not a partner.
-          Our goal is to build the best service on the market and remove as much routine as possible so you spend minimal time and get maximum results.
-        </p>
-      </section>
-
-      <section class="section" aria-label="How we work">
-        <div class="grid2">
-          <div class="feature">
-            <h3 data-i18n="f1.h3">Minimum effort — maximum income</h3>
-            <ul>
-              <li data-i18n="f1.li1">minimum requirements for content volume</li>
-              <li data-i18n="f1.li2">clear, understandable shooting format</li>
-              <li data-i18n="f1.li3">no chaotic “shoot more” race</li>
-              <li data-i18n="f1.li4">you don’t live for content — content works for you</li>
-            </ul>
-          </div>
-
-          <div class="feature">
-            <h3 data-i18n="f2.h3">Personal approach, not templates</h3>
-            <ul>
-              <li data-i18n="f2.li1">personal assistant always on call</li>
-              <li data-i18n="f2.li2">individual content plan for your style & boundaries</li>
-              <li data-i18n="f2.li3">full control: you know what happens and why</li>
-              <li data-i18n="f2.li4">we don’t break the model for the market — we adapt the market to the model</li>
-            </ul>
-          </div>
-
-          <div class="feature">
-            <h3 data-i18n="f3.h3">Scalable traffic, not one source</h3>
-            <ul>
-              <li data-i18n="f3.li1">social & organic: Twitter (software accounts), Twitter organic, Bluesky, Reddit, Instagram, TikTok, YouTube Shorts</li>
-              <li data-i18n="f3.li2">adult platforms: Fansly setup & launch, FUP traffic, SFS on free page</li>
-              <li data-i18n="f3.li3">adult sites & aggregators: Pornhub network, Xvideos, Xhamster, Spankbang, Eporner, Tnaflix, Redgifs, Sharesome, FikFap & more</li>
-              <li data-i18n="f3.li4">we build an ecosystem, not a single lucky channel</li>
-            </ul>
-          </div>
-
-          <div class="feature">
-            <h3 data-i18n="f4.h3">Transparency & control</h3>
-            <ul>
-              <li data-i18n="f4.li1">we do not take away access to your pages</li>
-              <li data-i18n="f4.li2">you always have full access and control</li>
-              <li data-i18n="f4.li3">no hidden actions behind your back</li>
-              <li data-i18n="f4.li4">you always see what happens with your accounts and traffic</li>
-            </ul>
-          </div>
-
-          <div class="feature">
-            <h3 data-i18n="f5.h3">Professional team</h3>
-            <ul>
-              <li data-i18n="f5.li1">experienced team of chatters</li>
-              <li data-i18n="f5.li2">people who understand subscriber psychology</li>
-              <li data-i18n="f5.li3">specialists focused on retention and long-term growth, not one-time sales</li>
-            </ul>
-          </div>
-
-          <div class="feature">
-            <h3 data-i18n="f6.h3">Why it’s unique</h3>
-            <ul>
-              <li data-i18n="f6.li1">market “norm”: 20% to the model, one traffic source, no support, full dependence</li>
-              <li data-i18n="f6.li2">our logic: 40% to the model, diversified traffic, personal approach, transparency, long-term strategy</li>
-              <li data-i18n="f6.li3">this offer is rare — that’s exactly why we built it</li>
-            </ul>
-          </div>
+      <div class="position-layout">
+        <h2 class="statement reveal" data-i18n="position.title">
+          Модель — не расходник.<br>
+          <em>Она и есть бренд.</em>
+        </h2>
+        <div class="position-copy reveal">
+          <p data-i18n="position.text">
+            Поэтому мы не отнимаем доступы, не прячем действия и не заставляем бесконечно «снимать больше». Команда берёт на себя стратегию, трафик, продажи и рутину — а система адаптируется под тебя.
+          </p>
+          <a class="text-link" href="#compare">
+            <span data-i18n="position.link">Сравнить подходы</span>
+            <b aria-hidden="true">↘</b>
+          </a>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-label="Cases">
-        <div class="casesHead">
+      <div class="principles">
+        <article class="principle reveal">
+          <span class="principle-number" data-count="40">40</span><sup>%</sup>
+          <h3 data-i18n="principles.oneTitle">модели от чистой прибыли</h3>
+          <p data-i18n="principles.oneText">Понятная схема без «сюрпризов» в конце месяца.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle-symbol" aria-hidden="true">∞</span>
+          <h3 data-i18n="principles.twoTitle">источников для роста</h3>
+          <p data-i18n="principles.twoText">Не ставим весь результат на один удачный канал.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle-symbol" aria-hidden="true">24/7</span>
+          <h3 data-i18n="principles.threeTitle">поддержка и контроль</h3>
+          <p data-i18n="principles.threeText">Личный контакт и прозрачный процесс без исчезновений.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach section-pad" id="approach">
+      <div class="section-top section-top-light reveal">
+        <p class="section-kicker"><span>03</span><b data-i18n="approach.kicker">Как мы работаем</b></p>
+        <p class="section-aside" data-i18n="approach.aside">Система вместо хаоса</p>
+      </div>
+
+      <div class="approach-heading">
+        <h2 class="reveal" data-i18n="approach.title">Меньше рутины.<br><em>Больше результата.</em></h2>
+        <p class="reveal" data-i18n="approach.intro">Четыре слоя одной системы: позиционирование, контент, дистрибуция и удержание.</p>
+      </div>
+
+      <div class="approach-list">
+        <article class="approach-item reveal">
+          <span class="approach-index">01</span>
           <div>
-            <h2 data-i18n="cases.h2">Cases</h2>
-            <p class="sub" data-i18n="cases.sub">Swipe / scroll. 14 images from <code>assets/cases/1.jpeg</code> to <code>14.jpeg</code>.</p>
+            <h3 data-i18n="approach.oneTitle">Персональная стратегия</h3>
+            <p data-i18n="approach.oneText">Определяем стиль, границы, цели и сильные стороны. Никаких универсальных сценариев, которые не похожи на тебя.</p>
           </div>
+          <span class="approach-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="approach-item reveal">
+          <span class="approach-index">02</span>
+          <div>
+            <h3 data-i18n="approach.twoTitle">Контент без выгорания</h3>
+            <p data-i18n="approach.twoText">Даём чёткий формат съёмок и минимально необходимый объём. Контент работает на тебя, а не забирает всю жизнь.</p>
+          </div>
+          <span class="approach-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="approach-item reveal">
+          <span class="approach-index">03</span>
+          <div>
+            <h3 data-i18n="approach.threeTitle">Мультиканальный рост</h3>
+            <p data-i18n="approach.threeText">Соцсети, органика, adult-платформы и агрегаторы работают как единая экосистема, а не набор случайных тестов.</p>
+          </div>
+          <span class="approach-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="approach-item reveal">
+          <span class="approach-index">04</span>
+          <div>
+            <h3 data-i18n="approach.fourTitle">Продажи и удержание</h3>
+            <p data-i18n="approach.fourText">Опытная команда понимает психологию подписчиков и фокусируется на LTV, удержании и долгосрочном росте.</p>
+          </div>
+          <span class="approach-arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="growth section-pad" aria-labelledby="growthTitle">
+      <div class="growth-copy">
+        <p class="section-kicker section-kicker-dark reveal"><span>04</span><b data-i18n="growth.kicker">Growth engine</b></p>
+        <h2 id="growthTitle" class="reveal" data-i18n="growth.title">Не канал.<br><em>Экосистема.</em></h2>
+        <p class="growth-lead reveal" data-i18n="growth.text">
+          Если один источник меняет алгоритм, система продолжает работать. Мы распределяем внимание, тесты и контент между площадками и усиливаем то, что даёт результат.
+        </p>
+        <div class="channel-cloud reveal" aria-label="Каналы трафика">
+          <span>Twitter</span><span>Reddit</span><span>Instagram</span><span>TikTok</span>
+          <span>YouTube Shorts</span><span>Bluesky</span><span>Fansly</span><span>FUP</span>
+          <span>Redgifs</span><span>Sharesome</span><span>Adult networks</span>
         </div>
+      </div>
 
-        <div class="carouselWrap" aria-label="Cases carousel">
-          <div class="carousel" id="carousel" tabindex="0" aria-label="Carousel (use arrows)">
-            <!-- Slides injected by JS -->
-          </div>
-          <div class="controls">
-            <div class="btnRow">
-              <button class="navbtn" type="button" id="prev" aria-label="Previous slide">← <span data-i18n="cases.prev">Prev</span></button>
-              <button class="navbtn" type="button" id="next" aria-label="Next slide"><span data-i18n="cases.next">Next</span> →</button>
-            </div>
-            <div class="dots" id="dots" aria-label="Slide indicators"></div>
-          </div>
+      <div class="growth-orbit reveal" aria-hidden="true">
+        <div class="orbit-center">
+          <img src="assets/logo.jpeg" alt="">
         </div>
-      </section>
+        <div class="orbit-ring orbit-ring-one"></div>
+        <div class="orbit-ring orbit-ring-two"></div>
+        <span class="satellite satellite-one">SOCIAL</span>
+        <span class="satellite satellite-two">ORGANIC</span>
+        <span class="satellite satellite-three">ADULT</span>
+        <span class="satellite satellite-four">RETENTION</span>
+      </div>
+    </section>
 
-      <footer class="footer" aria-label="Contacts">
-        <h2 data-i18n="contact.h2">Contacts</h2>
-        <p data-i18n="contact.p">If you want to start working with us — write in Telegram here:</p>
-        <div class="handle">@shushecka</div>
-      </footer>
-    </main>
-  </div>
+    <section class="cases section-pad" id="cases">
+      <div class="section-top reveal">
+        <p class="section-kicker"><span>05</span><b data-i18n="cases.kicker">Результаты</b></p>
+        <p class="section-aside" data-i18n="cases.aside">Реальные кабинеты · без рендера</p>
+      </div>
 
-  <script>
-    (function(){
-      const i18n = {
-        en: {
-          "top.tagline": "Model-first growth. Transparent. Scalable.",
-          "hero.kicker": "MODEL-FIRST AGENCY",
-          "hero.h1": "We build around the model — not at her expense.",
-          "hero.lead": "Our position is simple and honest: the model receives <b>40% of net profit</b>. Not “before deductions”, not “someday later” — a clear, transparent scheme.",
-          "hero.p1": "40% to the model",
-          "hero.p2": "Diversified traffic system",
-          "hero.p3": "Full access & control",
-          "stats.s1n": "40%",
-          "stats.s1t": "to the model from net profit",
-          "stats.s2n": "Ecosystem",
-          "stats.s2t": "not a single lucky channel",
-          "stats.s3n": "Assistant",
-          "stats.s3t": "always on call for questions",
-          "stats.s4n": "Transparency",
-          "stats.s4t": "no hidden actions or “black magic”",
-          "cta.text": "Want to start working with us? Message us on Telegram.",
-          "cta.btn": "Write on Telegram",
-          "cta.note": "We respond fast. No spam. Straight to business.",
-          "pos.h2": "Our position",
-          "pos.p": "We don’t believe in agencies where the model is a consumable, not a partner. Our goal is to build the best service on the market and remove as much routine as possible so you spend minimal time and get maximum results.",
-          "f1.h3": "Minimum effort — maximum income",
-          "f1.li1": "minimum requirements for content volume",
-          "f1.li2": "clear, understandable shooting format",
-          "f1.li3": "no chaotic “shoot more” race",
-          "f1.li4": "you don’t live for content — content works for you",
-          "f2.h3": "Personal approach, not templates",
-          "f2.li1": "personal assistant always on call",
-          "f2.li2": "individual content plan for your style & boundaries",
-          "f2.li3": "full control: you know what happens and why",
-          "f2.li4": "we don’t break the model for the market — we adapt the market to the model",
-          "f3.h3": "Scalable traffic, not one source",
-          "f3.li1": "social & organic: Twitter (software accounts), Twitter organic, Bluesky, Reddit, Instagram, TikTok, YouTube Shorts",
-          "f3.li2": "adult platforms: Fansly setup & launch, FUP traffic, SFS on free page",
-          "f3.li3": "adult sites & aggregators: Pornhub network, Xvideos, Xhamster, Spankbang, Eporner, Tnaflix, Redgifs, Sharesome, FikFap & more",
-          "f3.li4": "we build an ecosystem, not a single lucky channel",
-          "f4.h3": "Transparency & control",
-          "f4.li1": "we do not take away access to your pages",
-          "f4.li2": "you always have full access and control",
-          "f4.li3": "no hidden actions behind your back",
-          "f4.li4": "you always see what happens with your accounts and traffic",
-          "f5.h3": "Professional team",
-          "f5.li1": "experienced team of chatters",
-          "f5.li2": "people who understand subscriber psychology",
-          "f5.li3": "specialists focused on retention and long-term growth, not one-time sales",
-          "f6.h3": "Why it’s unique",
-          "f6.li1": "market “norm”: 20% to the model, one traffic source, no support, full dependence",
-          "f6.li2": "our logic: 40% to the model, diversified traffic, personal approach, transparency, long-term strategy",
-          "f6.li3": "this offer is rare — that’s exactly why we built it",
-          "cases.h2": "Cases",
-          "cases.sub": "Swipe / scroll. 14 images from assets/cases/1.jpeg to 14.jpeg.",
-          "cases.prev": "Prev",
-          "cases.next": "Next",
-          "contact.h2": "Contacts",
-          "contact.p": "If you want to start working with us — write in Telegram here:"
-        },
-        es: {
-          "top.tagline": "Crecimiento centrado en la modelo. Transparente. Escalable.",
-          "hero.kicker": "AGENCIA CENTRADA EN LA MODELO",
-          "hero.h1": "Construimos el trabajo alrededor de la modelo — no a costa de ella.",
-          "hero.lead": "Nuestra postura es simple y honesta: la modelo recibe <b>40% de la ganancia neta</b>. No “antes de descuentos”, no “algún día” — un esquema claro y transparente.",
-          "hero.p1": "40% para la modelo",
-          "hero.p2": "Tráfico diversificado",
-          "hero.p3": "Acceso y control total",
-          "stats.s1n": "40%",
-          "stats.s1t": "para la modelo (ganancia neta)",
-          "stats.s2n": "Ecosistema",
-          "stats.s2t": "no un solo canal “suerte”",
-          "stats.s3n": "Asistente",
-          "stats.s3t": "siempre disponible",
-          "stats.s4n": "Transparencia",
-          "stats.s4t": "sin acciones ocultas",
-          "cta.text": "¿Quieres trabajar con nosotros? Escríbenos en Telegram.",
-          "cta.btn": "Escribir en Telegram",
-          "cta.note": "Respondemos rápido. Sin spam. Directo al grano.",
-          "pos.h2": "Nuestra posición",
-          "pos.p": "No creemos en agencias donde la modelo es un recurso descartable y no una socia. Nuestro objetivo es crear el mejor servicio del mercado y quitarte la mayor parte de la rutina para que inviertas el mínimo tiempo y obtengas el máximo resultado.",
-          "f1.h3": "Mínimo esfuerzo — máximo ingreso",
-          "f1.li1": "requisitos mínimos de volumen de contenido",
-          "f1.li2": "formato de grabación claro y entendible",
-          "f1.li3": "sin carrera caótica de “graba más”",
-          "f1.li4": "no vives para el contenido — el contenido trabaja para ti",
-          "f2.h3": "Enfoque personal, no plantillas",
-          "f2.li1": "asistente personal siempre en línea",
-          "f2.li2": "plan de contenido individual según tu estilo y límites",
-          "f2.li3": "control total: entiendes qué pasa y por qué",
-          "f2.li4": "no rompemos a la modelo para el mercado — adaptamos el mercado a la modelo",
-          "f3.h3": "Tráfico escalable, no una sola fuente",
-          "f3.li1": "social y orgánico: Twitter (cuentas con software), Twitter orgánico, Bluesky, Reddit, Instagram, TikTok, YouTube Shorts",
-          "f3.li2": "plataformas adult: configuración y lanzamiento de Fansly, tráfico FUP, SFS en página gratuita",
-          "f3.li3": "sitios y agregadores: red Pornhub, Xvideos, Xhamster, Spankbang, Eporner, Tnaflix, Redgifs, Sharesome, FikFap y más",
-          "f3.li4": "construimos un ecosistema, no un canal con suerte",
-          "f4.h3": "Transparencia y control",
-          "f4.li1": "no quitamos accesos de tus páginas",
-          "f4.li2": "siempre tienes acceso y control total",
-          "f4.li3": "sin acciones ocultas a tus espaldas",
-          "f4.li4": "siempre ves qué pasa con tus cuentas y el tráfico",
-          "f5.h3": "Equipo profesional",
-          "f5.li1": "equipo de chatters con experiencia",
-          "f5.li2": "gente que entiende la psicología del suscriptor",
-          "f5.li3": "especialistas en retención y crecimiento a largo plazo, no ventas únicas",
-          "f6.h3": "Por qué es único",
-          "f6.li1": "lo “normal” del mercado: 20% para la modelo, una fuente de tráfico, sin soporte, dependencia total",
-          "f6.li2": "nuestra lógica: 40% para la modelo, tráfico diversificado, enfoque personal, transparencia, estrategia a largo plazo",
-          "f6.li3": "esta oferta es rara — por eso la construimos",
-          "cases.h2": "Casos",
-          "cases.sub": "Desliza / desplázate. 14 imágenes en assets/cases/1.jpeg a 14.jpeg.",
-          "cases.prev": "Anterior",
-          "cases.next": "Siguiente",
-          "contact.h2": "Contactos",
-          "contact.p": "Si quieres trabajar con nosotros — escríbenos en Telegram aquí:"
-        },
-        ru: {
-          "top.tagline": "Работа вокруг модели. Прозрачно. Масштабируемо.",
-          "hero.kicker": "АГЕНТСТВО ВОКРУГ МОДЕЛИ",
-          "hero.h1": "Мы строим работу вокруг модели, а не за её счёт.",
-          "hero.lead": "Наша позиция простая и честная: модель получает <b>40% от чистой прибыли</b>. Не «до вычета», не «когда-нибудь потом», а по понятной и прозрачной схеме.",
-          "hero.p1": "40% модели",
-          "hero.p2": "Диверсифицированный трафик",
-          "hero.p3": "Полный доступ и контроль",
-          "stats.s1n": "40%",
-          "stats.s1t": "модели от чистой прибыли",
-          "stats.s2n": "Экосистема",
-          "stats.s2t": "а не один удачный канал",
-          "stats.s3n": "Ассистент",
-          "stats.s3t": "всегда на связи",
-          "stats.s4n": "Прозрачность",
-          "stats.s4t": "без «чёрной магии» за спиной",
-          "cta.text": "Хочешь начать работать с нами? Пиши в Telegram.",
-          "cta.btn": "Написать в Telegram",
-          "cta.note": "Отвечаем быстро. Без спама. По делу.",
-          "pos.h2": "Наша позиция",
-          "pos.p": "Мы не верим в агентства, где модель — расходник, а не партнёр. Наша цель — создать лучший сервис на рынке и снять с модели максимум рутины, чтобы она тратила минимум времени и получала максимальный результат.",
-          "f1.h3": "Минимум усилий — максимум дохода",
-          "f1.li1": "минимальные требования к количеству контента",
-          "f1.li2": "чёткий и понятный формат съёмок",
-          "f1.li3": "никакой хаотичной гонки «снимай больше»",
-          "f1.li4": "ты не живёшь для контента — контент работает на тебя",
-          "f2.h3": "Персональный подход, а не шаблоны",
-          "f2.li1": "личный ассистент всегда на связи и помогает по любым вопросам",
-          "f2.li2": "индивидуальный контент‑план под формат, стиль и табу",
-          "f2.li3": "полный контроль над процессом и понимание, что и зачем происходит",
-          "f2.li4": "мы не ломаем модель под рынок — мы подстраиваем рынок под модель",
-          "f3.h3": "Масштабный трафик, а не один источник",
-          "f3.li1": "соцсети и органика: Twitter (5–10 аккаунтов на софте), Twitter органика, Bluesky, Reddit, Instagram, TikTok, YouTube Shorts",
-          "f3.li2": "adult‑платформы: Fansly (оформление и запуск), FUP‑трафик, SFS на бесплатной странице",
-          "f3.li3": "adult‑сайты и агрегаторы: Pornhub и дочерние сети, Xvideos, Xhamster, Spankbang, Eporner, Tnaflix и другие, Redgifs, Sharesome, FikFap и доп. источники",
-          "f3.li4": "мы выстраиваем экосистему, а не один удачный канал",
-          "f4.h3": "Прозрачность и контроль",
-          "f4.li1": "мы не забираем доступы от страниц",
-          "f4.li2": "модель всегда имеет полный доступ и может контролировать процесс",
-          "f4.li3": "никакой «чёрной магии» и скрытых действий за спиной",
-          "f4.li4": "ты всегда видишь, что происходит с твоими аккаунтами и трафиком",
-          "f5.h3": "Профессиональная команда",
-          "f5.li1": "опытная команда секстеров",
-          "f5.li2": "люди, которые понимают психологию подписчиков",
-          "f5.li3": "специалисты, ориентированные на удержание и рост дохода, а не на разовые продажи",
-          "f6.h3": "Почему это уникально",
-          "f6.li1": "на рынке до сих пор норма: 20% модели, один источник трафика, отсутствие поддержки, полная зависимость",
-          "f6.li2": "мы работаем по другой логике: 40% модели, масштабный и диверсифицированный трафик, персональный подход, прозрачность, долгосрочная стратегия",
-          "f6.li3": "такого предложения почти нет — и именно поэтому мы его сделали",
-          "cases.h2": "Кейсы",
-          "cases.sub": "Листай / свайпай. 14 фото из assets/cases/1.jpeg … 14.jpeg.",
-          "cases.prev": "Назад",
-          "cases.next": "Вперёд",
-          "contact.h2": "Контакты",
-          "contact.p": "Если хочешь начать работать с нами — пиши в Telegram сюда:"
-        }
-      };
+      <div class="cases-heading">
+        <h2 class="reveal" data-i18n="cases.title">Цифры говорят<br><em>громче обещаний.</em></h2>
+        <div class="cases-intro reveal">
+          <p data-i18n="cases.text">Собрали часть реальной динамики по аккаунтам. Нажми на любой кейс, чтобы рассмотреть данные крупнее.</p>
+          <span><b>14</b> <i data-i18n="cases.count">скриншотов результатов</i></span>
+        </div>
+      </div>
 
-      const DEFAULT_LANG = "en";
-      const langBtns = Array.from(document.querySelectorAll(".langbtn"));
-      const allNodes = Array.from(document.querySelectorAll("[data-i18n]"));
+      <div class="case-gallery" id="caseGallery" aria-live="polite"></div>
 
-      function setLang(lang){
-        const dict = i18n[lang] || i18n[DEFAULT_LANG];
-        document.documentElement.lang = lang;
-        allNodes.forEach(node=>{
-          const key = node.getAttribute("data-i18n");
-          if(dict[key] !== undefined){
-            node.innerHTML = dict[key];
-          }
-        });
-        langBtns.forEach(b=> b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-        try { localStorage.setItem("va_lang", lang); } catch(e){}
-      }
+      <div class="cases-footer reveal">
+        <p data-i18n="cases.disclaimer">Результаты индивидуальны и зависят от стартовых данных, регулярности и выбранной стратегии.</p>
+        <a class="button button-blue magnetic" href="https://t.me/shushecka" target="_blank" rel="noopener">
+          <span data-i18n="cases.cta">Обсудить свой потенциал</span><b aria-hidden="true">↗</b>
+        </a>
+      </div>
+    </section>
 
-      langBtns.forEach(btn=>{
-        btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
-      });
+    <section class="compare section-pad" id="compare">
+      <div class="section-top reveal">
+        <p class="section-kicker"><span>06</span><b data-i18n="compare.kicker">Разница</b></p>
+        <p class="section-aside" data-i18n="compare.aside">Почему модель чувствует контроль</p>
+      </div>
 
-      // Init language from storage, then browser, else default.
-      let lang = DEFAULT_LANG;
-      try {
-        const saved = localStorage.getItem("va_lang");
-        if(saved && i18n[saved]) lang = saved;
-      } catch(e){}
-      if(!i18n[lang]){
-        const nav = (navigator.language || "").slice(0,2).toLowerCase();
-        if(i18n[nav]) lang = nav;
-      }
-      setLang(lang);
+      <div class="compare-heading">
+        <h2 class="reveal" data-i18n="compare.title">Рынок привык к одному.<br><em>Мы выбрали другое.</em></h2>
+      </div>
 
-      // Build carousel
-      const carousel = document.getElementById("carousel");
-      const dots = document.getElementById("dots");
-      const total = 14;
+      <div class="compare-grid">
+        <article class="compare-card compare-market reveal">
+          <div class="compare-label"><span data-i18n="compare.marketLabel">Обычная схема</span><b>20%</b></div>
+          <ul>
+            <li data-i18n="compare.market1">Один основной источник трафика</li>
+            <li data-i18n="compare.market2">Шаблонный контент для всех</li>
+            <li data-i18n="compare.market3">Минимум прозрачности и поддержки</li>
+            <li data-i18n="compare.market4">Зависимость от команды и доступов</li>
+          </ul>
+          <span class="compare-stamp" data-i18n="compare.marketStamp">MARKET DEFAULT</span>
+        </article>
 
-      function slideEl(i){
-        const s = document.createElement("div");
-        s.className = "slide";
-        s.setAttribute("data-idx", String(i));
+        <article class="compare-card compare-virgin reveal">
+          <div class="compare-label"><span>Virgin Agency</span><b>40%</b></div>
+          <ul>
+            <li data-i18n="compare.virgin1">Диверсифицированная экосистема трафика</li>
+            <li data-i18n="compare.virgin2">Стратегия под стиль и личные границы</li>
+            <li data-i18n="compare.virgin3">Личный ассистент и понятный процесс</li>
+            <li data-i18n="compare.virgin4">Полный доступ к страницам и данным</li>
+          </ul>
+          <span class="compare-stamp" data-i18n="compare.virginStamp">MODEL FIRST</span>
+        </article>
+      </div>
+    </section>
 
-        const cap = document.createElement("div");
-        cap.className = "cap";
-        cap.textContent = "Case " + i;
+    <section class="faq section-pad" id="faq">
+      <div class="section-top reveal">
+        <p class="section-kicker"><span>07</span><b>FAQ</b></p>
+        <p class="section-aside" data-i18n="faq.aside">Коротко о главном</p>
+      </div>
 
-        const ph = document.createElement("div");
-        ph.className = "ph";
+      <div class="faq-layout">
+        <h2 class="reveal" data-i18n="faq.title">Вопросы,<br><em>которые стоит задать.</em></h2>
+        <div class="faq-list reveal">
+          <details>
+            <summary><span data-i18n="faq.q1">У меня останется доступ к аккаунтам?</span><b aria-hidden="true">+</b></summary>
+            <p data-i18n="faq.a1">Да. Ты сохраняешь полный доступ и можешь в любой момент видеть, что происходит с аккаунтами, контентом и трафиком.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q2">Сколько контента нужно снимать?</span><b aria-hidden="true">+</b></summary>
+            <p data-i18n="faq.a2">Мы стремимся к минимально достаточному объёму. После знакомства команда собирает понятный план под твой формат, стиль и ограничения.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q3">Как считается доля модели?</span><b aria-hidden="true">+</b></summary>
+            <p data-i18n="faq.a3">Модель получает 40% от чистой прибыли по прозрачной и заранее понятной схеме. Детали и состав расходов фиксируются до старта.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq.q4">Что происходит после первого сообщения?</span><b aria-hidden="true">+</b></summary>
+            <p data-i18n="faq.a4">Коротко знакомимся, обсуждаем текущую точку, цели и границы, затем показываем реалистичный план запуска без давления и обязательств.</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-        const img = document.createElement("img");
-        img.src = "assets/cases/" + i + ".jpeg";
-        img.alt = "Case " + i;
-        img.loading = "lazy";
-        img.decoding = "async";
+    <section class="final-cta" aria-labelledby="finalTitle">
+      <div class="final-flower" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p class="section-kicker section-kicker-dark reveal"><span>08</span><b data-i18n="final.kicker">Твоя следующая глава</b></p>
+      <h2 id="finalTitle" class="reveal" data-i18n="final.title">Не работать на агентство.<br><em>Работать вместе с ним.</em></h2>
+      <p class="reveal" data-i18n="final.text">Напиши нам. Без длинных форм, спама и продажного спектакля — просто обсудим, подходим ли мы друг другу.</p>
+      <a class="final-link magnetic reveal" href="https://t.me/shushecka" target="_blank" rel="noopener">
+        <span>@shushecka</span><b aria-hidden="true">↗</b>
+      </a>
+    </section>
+  </main>
 
-        // if missing, show placeholder text
-        img.addEventListener("error", ()=>{
-          img.remove();
-          const t = document.createElement("div");
-          t.style.cssText = "height:100%;display:flex;align-items:center;justify-content:center;padding:18px;text-align:center;color:rgba(255,255,255,.65);font-weight:800;line-height:1.4";
-          t.innerHTML = 'Missing <code style="color:rgba(255,255,255,.9)">assets/cases/' + i + '.jpeg</code>';
-          ph.appendChild(t);
-        });
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top" aria-label="Virgin Agency — наверх">
+      <img class="brand-mark" src="assets/logo.jpeg" alt="" width="48" height="48">
+      <span class="brand-name">VIRGIN<br>AGENCY</span>
+    </a>
+    <p data-i18n="footer.line">Model-first growth · Transparent · Scalable</p>
+    <p>© <span id="year">2026</span> Virgin Agency</p>
+  </footer>
 
-        ph.appendChild(img);
-        s.appendChild(ph);
-        s.appendChild(cap);
-        return s;
-      }
-
-      function dotEl(i){
-        const d = document.createElement("div");
-        d.className = "dotb";
-        d.setAttribute("data-dot", String(i));
-        d.setAttribute("role","button");
-        d.setAttribute("tabindex","0");
-        d.setAttribute("aria-label","Go to slide " + i);
-        d.addEventListener("click", ()=> goTo(i));
-        d.addEventListener("keydown", (e)=>{
-          if(e.key === "Enter" || e.key === " "){ e.preventDefault(); goTo(i); }
-        });
-        return d;
-      }
-
-      for(let i=1;i<=total;i++){
-        carousel.appendChild(slideEl(i));
-        dots.appendChild(dotEl(i));
-      }
-
-      const slides = Array.from(carousel.querySelectorAll(".slide"));
-      const dotNodes = Array.from(dots.querySelectorAll(".dotb"));
-
-      function currentIndex(){
-        // find nearest slide to center
-        const rect = carousel.getBoundingClientRect();
-        const cx = rect.left + rect.width/2;
-        let best = {i:1, d:1e9};
-        slides.forEach(s=>{
-          const r = s.getBoundingClientRect();
-          const sx = r.left + r.width/2;
-          const dist = Math.abs(sx - cx);
-          const idx = parseInt(s.getAttribute("data-idx"), 10);
-          if(dist < best.d){ best = {i: idx, d: dist}; }
-        });
-        return best.i;
-      }
-
-      function updateDots(i){
-        dotNodes.forEach(d=> d.setAttribute("aria-current", String(parseInt(d.dataset.dot,10)===i)));
-      }
-
-      function goTo(i){
-        const target = slides[i-1];
-        if(!target) return;
-        target.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
-        updateDots(i);
-      }
-
-      function next(){
-        const i = currentIndex();
-        goTo(Math.min(total, i+1));
-      }
-      function prev(){
-        const i = currentIndex();
-        goTo(Math.max(1, i-1));
-      }
-
-      document.getElementById("next").addEventListener("click", next);
-      document.getElementById("prev").addEventListener("click", prev);
-
-      // keyboard nav
-      carousel.addEventListener("keydown", (e)=>{
-        if(e.key === "ArrowRight"){ e.preventDefault(); next(); }
-        if(e.key === "ArrowLeft"){ e.preventDefault(); prev(); }
-      });
-
-      // update dots on scroll (throttled)
-      let t = null;
-      carousel.addEventListener("scroll", ()=>{
-        if(t) return;
-        t = setTimeout(()=>{
-          t = null;
-          updateDots(currentIndex());
-        }, 120);
-      });
-
-      // init dot
-      updateDots(1);
-    })();
-  </script>
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр кейса">
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Закрыть">×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" id="lightboxPrev" aria-label="Предыдущий кейс">←</button>
+    <figure>
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" type="button" id="lightboxNext" aria-label="Следующий кейс">→</button>
+  </dialog>
 </body>
 </html>
