@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>АДЕЛЬ Private Links</title>
+  <meta name="description" content="Exclusive selections behind the scenes moments and personal answers choose your favorite place">
+  <meta property="og:title" content="АДЕЛЬ Private Links">
+  <meta property="og:description" content="Exclusive selections behind the scenes moments and personal answers choose your favorite place">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="media/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="АДЕЛЬ Private Links">
+  <meta name="twitter:description" content="Exclusive selections behind the scenes moments and personal answers choose your favorite place">
+  <meta name="twitter:image" content="media/og.jpg">
+  <meta name="theme-color" content="#11150f">
+  <link rel="icon" href="media/favicon.jpg">
+  <style>
+    :root{--ink:#f8f5ef;--muted:#f8f5efa8;--line:#ffffff24;--surface:#0b0c0bad;--blue:#6fd5ff;--pink:#ff8cc7;--lime:#d7ff75;--display:"Bodoni 72","Iowan Old Style","Times New Roman",serif;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}
+    html{min-width:320px;scroll-behavior:smooth;background:#11150f}
+    body{min-width:320px;margin:0;background:#11150f;color:var(--ink);font-family:var(--sans);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{font:inherit}
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--lime);color:#11150f}
+    .link-hub{isolation:isolate;min-height:100svh;position:relative;overflow:hidden;background:#11150f}
+    .media-layer,.poster-layer,.background-media,.color-wash,.edge-shade,.noise{position:fixed;inset:0}
+    .media-layer{z-index:-2;overflow:hidden;background:#11150f}
+    .poster-layer{background:linear-gradient(#0b0f0a1f,#0b0f0a1f),url("media/poster.jpg") center 43%/cover no-repeat;transform:scale(1.02)}
+    .background-media{width:100%;height:100%;border:0;object-fit:cover;object-position:center 43%;opacity:0;transform:scale(1.018);transition:opacity 1.15s cubic-bezier(.4,0,.2,1)}
+    .background-media:nth-of-type(2){object-position:center 48%}
+    .background-media:nth-of-type(3){object-position:center 44%}
+    .background-media.is-active{opacity:1}
+    .color-wash{pointer-events:none;background:radial-gradient(circle at 14% 26%,#d7ff752e,transparent 31%),radial-gradient(circle at 80% 74%,#ff66ad29,transparent 34%),linear-gradient(102deg,#0709071a 0%,#0709076b 54%,#070907ad 100%);mix-blend-mode:screen}
+    .edge-shade{pointer-events:none;background:linear-gradient(#0405048c 0%,transparent 23% 68%,#040504cc 100%),linear-gradient(90deg,#04050499 0%,#04050414 46%,#04050475 100%)}
+    .noise{pointer-events:none;opacity:.12;background-image:repeating-radial-gradient(circle at 18% 27%,#ffffff3d 0 .45px,transparent .8px 3px),repeating-radial-gradient(circle at 72% 68%,#00000047 0 .55px,transparent .9px 4px);background-size:5px 5px,7px 7px;mix-blend-mode:soft-light}
+    .page-shell{width:min(100%,1480px);min-height:100svh;margin:0 auto;padding:22px clamp(22px,4vw,64px) 18px;display:grid;grid-template-rows:auto 1fr auto}
+    .topbar,.panel-heading,.social-heading,.panel-footer,.page-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .topbar{gap:20px;animation:fade-down .7s 80ms both cubic-bezier(.22,1,.36,1)}
+    .brand{display:inline-flex;align-items:center;gap:12px}
+    .brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid #ffffff57;border-radius:50%;background:#0b0c0b4d;backdrop-filter:blur(12px);font-family:var(--display);font-size:21px;font-style:italic}
+    .brand-copy{display:grid;gap:3px;line-height:1}
+    .brand-copy strong{font-size:13px;letter-spacing:.19em}
+    .brand-copy small{color:var(--muted);font-size:9px;letter-spacing:.23em}
+    .share-button{min-height:42px;padding:0 7px 0 16px;display:inline-flex;align-items:center;gap:13px;border:1px solid #ffffff47;border-radius:999px;background:#0a0a0a38;color:var(--ink);cursor:pointer;backdrop-filter:blur(12px);font-size:10px;font-weight:800;letter-spacing:.16em;transition:.24s}
+    .share-button:hover{border-color:var(--lime);background:var(--lime);color:#11150f;transform:translateY(-2px)}
+    .share-arrow{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:#ffffff24;font-size:16px;transition:transform .24s}
+    .share-button:hover .share-arrow{transform:rotate(45deg)}
+    .main-grid{min-height:0;padding:clamp(44px,9vh,112px) 0 clamp(30px,5vh,58px);display:grid;grid-template-columns:minmax(0,1fr) minmax(390px,470px);align-items:end;gap:clamp(48px,7vw,116px)}
+    .hero-copy{max-width:770px;padding-bottom:clamp(10px,3vh,36px);animation:hero-in .9s .12s both cubic-bezier(.22,1,.36,1)}
+    .status-pill{width:fit-content;min-height:32px;padding:0 13px;display:inline-flex;align-items:center;gap:9px;border:1px solid #fff3;border-radius:999px;background:#08090847;backdrop-filter:blur(12px);font-size:9px;font-weight:800;letter-spacing:.17em}
+    .status-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 #d7ff7573;animation:pulse 2.2s infinite}
+    .eyebrow{margin:clamp(28px,4vh,48px) 0 16px;color:#f8f5efb8;font-size:10px;font-weight:800;letter-spacing:.35em}
+    h1{max-width:760px;margin:0;font-family:var(--display);font-size:clamp(54px,6.5vw,104px);font-weight:400;line-height:.86;letter-spacing:-.055em;text-wrap:balance;text-shadow:0 12px 44px #00000042}
+    h1:first-line{font-style:italic}
+    .hero-description{max-width:535px;margin:24px 0 0;color:#f8f5efc4;font-size:clamp(14px,1.15vw,17px);line-height:1.62}
+    .profile-signature{max-width:480px;margin-top:34px;display:grid;grid-template-columns:auto minmax(40px,1fr) auto;align-items:center;gap:14px;color:#f8f5efb8;font-size:9px;font-weight:800;letter-spacing:.22em}
+    .signature-line{height:1px;background:linear-gradient(90deg,#fff6,#ffffff0d)}
+    .link-panel{width:100%;padding:25px;border:1px solid #fff3;border-radius:30px;background:linear-gradient(145deg,#ffffff1a,transparent 32%),var(--surface);backdrop-filter:blur(20px) saturate(125%);box-shadow:0 34px 110px #0000005c,inset 0 1px #ffffff14;animation:panel-in .9s .18s both cubic-bezier(.22,1,.36,1)}
+    .panel-heading{align-items:flex-start;margin-bottom:20px}
+    .panel-heading p,.social-heading,.panel-footer,.page-footer{color:#f8f5ef85;font-size:8px;font-weight:800;letter-spacing:.2em}
+    .panel-heading p{margin:0 0 7px}
+    .panel-heading h2{margin:0;font-family:var(--display);font-size:32px;font-weight:400;font-style:italic;letter-spacing:-.035em}
+    .panel-number{color:#f8f5ef57;font-size:9px;font-weight:800;letter-spacing:.14em}
+    .primary-links{display:grid;gap:10px}
+    .primary-link{min-height:112px;padding:16px;position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;border:1px solid #ffffff24;border-radius:21px;background:#ffffff0e;transition:.28s}
+    .primary-link:hover{border-color:#ffffff70;background:#ffffff1b;transform:translateY(-4px) scale(1.008)}
+    .link-monogram{width:48px;height:48px;display:grid;place-items:center;border:1px solid #ffffff2e;border-radius:16px;background:linear-gradient(145deg,#6fd5ff52,#6fd5ff14);font-size:13px;font-weight:900;box-shadow:inset 0 1px #fff3}
+    .primary-link.pink .link-monogram{background:linear-gradient(145deg,#ff8cc757,#ff8cc714)}
+    .link-copy{min-width:0;display:grid;gap:5px}
+    .link-eyebrow{color:#f8f5ef80;font-size:7px;font-weight:900;letter-spacing:.16em}
+    .link-copy strong{font-family:var(--display);font-size:clamp(21px,2vw,26px);font-weight:400;letter-spacing:-.025em}
+    .link-copy small{overflow:hidden;color:#f8f5ef99;font-size:10px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
+    .link-action{display:grid;justify-items:end;gap:20px;color:#f8f5ef80;font-size:8px;font-weight:900;letter-spacing:.15em}
+    .link-action span:last-child{width:30px;height:30px;display:grid;place-items:center;border:1px solid #ffffff2e;border-radius:50%;color:var(--ink);font-size:15px;transition:.24s}
+    .primary-link:hover .link-action span:last-child{background:var(--ink);color:#11150f;transform:rotate(45deg)}
+    .social-section{margin-top:22px}
+    .social-heading{margin-bottom:11px}
+    .social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .social-link{min-height:62px;padding:10px 11px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:9px;border:1px solid #ffffff1c;border-radius:16px;background:#ffffff09;transition:.24s}
+    .social-link:hover{border-color:#ffffff4d;background:#ffffff16;transform:translateY(-3px)}
+    .social-link.is-disabled{opacity:.38;cursor:not-allowed}
+    .social-link.is-disabled:hover{border-color:#ffffff1c;background:#ffffff09;transform:none}
+    .social-monogram{width:31px;height:31px;display:grid;place-items:center;border-radius:10px;background:#ffffff17;font-size:9px;font-weight:900}
+    .social-copy{min-width:0;display:grid;gap:3px}
+    .social-copy strong{overflow:hidden;font-size:10px;text-overflow:ellipsis;white-space:nowrap}
+    .social-copy small{color:#f8f5ef73;font-size:8px}
+    .social-arrow{color:#f8f5ef6b;font-size:13px;transition:.22s}
+    .social-link:hover .social-arrow{color:var(--lime);transform:translate(2px,-2px)}
+    .panel-footer{margin-top:18px;padding-top:15px;border-top:1px solid #ffffff1a}
+    .page-footer{padding-top:16px;border-top:1px solid #ffffff21;animation:fade-up .8s .5s both}
+    .share-button:focus-visible,.primary-link:focus-visible,.social-link:focus-visible,.brand:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+    @keyframes fade-down{from{opacity:0;transform:translateY(-18px)}}
+    @keyframes fade-up{from{opacity:0;transform:translateY(18px)}}
+    @keyframes hero-in{from{opacity:0;transform:translateY(38px)}}
+    @keyframes panel-in{from{opacity:0;transform:translateY(34px) scale(.975)}}
+    @keyframes pulse{50%{opacity:.5}}
+    @media(max-width:980px){.link-hub{overflow:visible}.main-grid{padding-top:56px;grid-template-columns:1fr;align-items:start;gap:44px}.hero-copy{max-width:680px;padding:6vh 0 0}.link-panel{max-width:620px;justify-self:end}}
+    @media(max-width:620px){.page-shell{padding:16px 14px 13px}.brand-mark{width:38px;height:38px}.brand-copy strong{font-size:11px}.main-grid{padding:34px 0 28px;gap:34px}.hero-copy{padding-top:7vh}.eyebrow{margin:26px 0 12px}h1{font-size:clamp(48px,15vw,68px)}.hero-description{margin-top:19px;font-size:13px}.link-panel{padding:17px;border-radius:25px}.primary-link{min-height:105px;padding:13px;grid-template-columns:auto 1fr}.link-action{position:absolute;top:13px;right:13px}.social-grid{grid-template-columns:1fr}.page-footer{font-size:7px}}
+    @media(max-width:390px){.brand-copy small,.share-button>span:first-child{display:none}.share-button{padding-left:5px}h1{font-size:46px}.link-copy small{max-width:175px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.background-media{display:none}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main class="link-hub">
+    <div class="media-layer" aria-hidden="true">
+      <div class="poster-layer"></div>
+      <video class="background-media is-active" muted playsinline preload="metadata" autoplay poster="media/poster.jpg" src="media/background-1.mp4"></video>
+      <div class="color-wash"></div>
+      <div class="edge-shade"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Back to the top">
+          <span class="brand-mark" aria-hidden="true">А</span>
+          <span class="brand-copy"><strong>АДЕЛЬ</strong><small>PRIVATE LINKS</small></span>
+        </a>
+        <button class="share-button" type="button"><span class="share-label">SHARE</span><span class="share-arrow" aria-hidden="true">↗</span></button>
+      </header>
+      <section class="main-grid" id="top">
+        <div class="hero-copy">
+          <div class="status-pill"><span class="status-dot" aria-hidden="true"></span>NEW CONTENT THIS WEEK</div>
+          <p class="eyebrow">THE PRIVATE SIDE</p>
+          <h1>I can be really wet</h1>
+          <p class="hero-description">Exclusive selections behind the scenes moments and personal answers choose your favorite place</p>
+          <div class="profile-signature"><span>АДЕЛЬ</span><span class="signature-line" aria-hidden="true"></span><span>@its_kikidoll</span></div>
+        </div>
+        <div class="link-panel">
+          <div class="panel-heading"><div><p>CHOOSE YOUR ACCESS</p><h2>Come closer</h2></div><span class="panel-number">01 / 06</span></div>
+          <div class="primary-links">
+            <a class="primary-link pink" href="https://fansly.com/its_kikidoll/t7" target="_blank" rel="noopener noreferrer" aria-label="Open Fansly" data-analytics-kind="fansly" data-analytics-name="Fansly">
+              <span class="link-monogram">F</span>
+              <span class="link-copy"><span class="link-eyebrow">EXCLUSIVE ARCHIVE · Fansly</span><strong>See what I cant post</strong><small>Exclusive content you wont find anywhere else</small></span>
+              <span class="link-action"><span>VIEW</span><span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+          <div class="social-section">
+            <div class="social-heading"><span>KEEP UP WITH ME</span><span>04 SOCIALS</span></div>
+            <div class="social-grid">
+              <span class="social-link is-disabled" aria-label="YouTube is not connected">
+    <span class="social-monogram">YT</span>
+    <span class="social-copy"><strong>YouTube</strong><small>Watch</small></span>
+    <span class="social-arrow" aria-hidden="true">↗</span></span>
+              <span class="social-link is-disabled" aria-label="TikTok is not connected">
+    <span class="social-monogram">TT</span>
+    <span class="social-copy"><strong>TikTok</strong><small>Daily</small></span>
+    <span class="social-arrow" aria-hidden="true">↗</span></span>
+              <span class="social-link is-disabled" aria-label="Instagram is not connected">
+    <span class="social-monogram">IG</span>
+    <span class="social-copy"><strong>Instagram</strong><small>Latest</small></span>
+    <span class="social-arrow" aria-hidden="true">↗</span></span>
+              <span class="social-link is-disabled" aria-label="Twitter is not connected">
+    <span class="social-monogram">X</span>
+    <span class="social-copy"><strong>Twitter</strong><small>Thoughts</small></span>
+    <span class="social-arrow" aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+          <div class="panel-footer"><span>18+ ONLY</span><span>SAFE · PRIVATE · DIRECT</span></div>
+        </div>
+      </section>
+      <footer class="page-footer"><span>© 2026 АДЕЛЬ</span><span>ALL LINKS IN ONE PLACE</span></footer>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const videos = [...document.querySelectorAll(".background-media")];
+      let active = 0;
+      const play = (index) => {
+        if (!videos.length) return;
+        videos.forEach((video, current) => {
+          video.classList.toggle("is-active", current === index);
+          if (current !== index) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+        videos[index].play().catch(() => {});
+      };
+      videos.forEach((video, index) => {
+        video.addEventListener("ended", () => {
+          active = (index + 1) % videos.length;
+          play(active);
+        });
+      });
+      play(active);
+      const share = document.querySelector(".share-button");
+      const label = document.querySelector(".share-label");
+      share?.addEventListener("click", async () => {
+        try {
+          if (navigator.share) {
+            await navigator.share({ title: document.title, url: location.href });
+          } else {
+            await navigator.clipboard.writeText(location.href);
+            label.textContent = "COPIED";
+            setTimeout(() => { label.textContent = "SHARE"; }, 1600);
+          }
+        } catch {}
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const config = {"endpoint":"https://james-link-analytics.julliaxxx228.workers.dev","modelSlug":"its_kikidoll","linkPath":"its_kikidoll/1","linkSlug":"1","section":"nonExplicit","format":"short","destination":"Твиттер @Kik1Doll"};
+      const storageKey = "james-link-session";
+      const fallbackId = () => Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+      const eventId = () => (globalThis.crypto?.randomUUID?.() || fallbackId()).replace(/[^a-zA-Z0-9:_-]/g, "-");
+      let sessionId = "";
+      try {
+        sessionId = sessionStorage.getItem(storageKey) || eventId();
+        sessionStorage.setItem(storageKey, sessionId);
+      } catch {
+        sessionId = eventId();
+      }
+      const send = (eventType, targetKind, targetName = "") => {
+        const body = JSON.stringify({
+          eventId: eventId(),
+          eventType,
+          targetKind,
+          targetName,
+          modelSlug: config.modelSlug,
+          linkPath: config.linkPath,
+          linkSlug: config.linkSlug,
+          section: config.section,
+          format: config.format,
+          destination: config.destination,
+          sessionId
+        });
+        const url = config.endpoint + "/v1/events";
+        try {
+          if (navigator.sendBeacon?.(url, new Blob([body], { type: "text/plain;charset=UTF-8" }))) return;
+        } catch {}
+        fetch(url, {
+          method: "POST",
+          body,
+          headers: { "content-type": "text/plain;charset=UTF-8" },
+          mode: "cors",
+          keepalive: true
+        }).catch(() => {});
+      };
+      send("page_view", "page");
+      document.querySelectorAll("[data-analytics-kind]").forEach((element) => {
+        element.addEventListener("click", () => {
+          send(
+            "click",
+            element.dataset.analyticsKind,
+            element.dataset.analyticsName || ""
+          );
+        }, { capture: true });
+      });
+    })();
+  </script>
+</body>
+</html>
